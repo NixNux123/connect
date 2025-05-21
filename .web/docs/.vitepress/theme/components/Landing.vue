@@ -2,6 +2,7 @@
 
 import Testimonials from "./Testimonials.vue";
 import LogoCloud from "./LogoCloud.vue";
+import GlobeVisualization from "./GlobeVisualization.vue";
 </script>
 
 <template>
@@ -175,6 +176,33 @@ import LogoCloud from "./LogoCloud.vue";
         </div>
       </div>
     </div>
+    <!-- Globe section -->
+    <div class="py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid grid-cols-4 relative min-h-[800px]">
+          <!-- Text content in first column but centered -->
+          <div class="col-span-1 flex items-center">
+            <div class="text-left">
+              <h2 class="text-base font-semibold leading-7 text-[--vp-c-brand-2]">Global Network</h2>
+              <p class="mt-2 text-3xl font-bold tracking-tight text-[--vp-c-text-1] sm:text-4xl">Our Edge Locations</p>
+              <p class="mt-6 text-lg leading-8 text-[--vp-c-text-2]">
+                Connect your Minecraft servers through our global network of edge locations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Empty column for globe overflow -->
+          <div class="col-span-1"></div>
+
+          <!-- Globe centered in third column but overlapping -->
+          <div class="col-span-2 relative flex items-center">
+            <div class="absolute inset-0 -ml-[50%] -mr-[50%] flex items-center">
+              <GlobeVisualization />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <Testimonials/>
 
@@ -186,5 +214,10 @@ import LogoCloud from "./LogoCloud.vue";
 </template>
 
 <style scoped>
-
+.globe-container {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  margin-bottom: 2rem;
+}
 </style>
